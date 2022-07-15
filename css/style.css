@@ -423,6 +423,19 @@ body {
   }
 }
 
+.footer__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .footer__copyright {
   font-family: "DM Mono";
   font-size: 0.8125rem;
@@ -446,6 +459,10 @@ body {
   font-family: "DM Mono";
   font-size: 1rem;
   line-height: 1.1875;
+  padding: 0.3125rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .footer__author {
@@ -755,6 +772,12 @@ body {
   }
 }
 
+.item-artist {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .item-artist__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,6 +894,9 @@ body {
   font-size: 1rem;
   line-height: 1;
   padding: 1.5625rem 1.75rem 1.5625rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .tabs__title._tab-active {
@@ -1297,7 +1323,12 @@ body {
   display: block;
   font-family: "DM Mono";
   line-height: 1.5;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 1.25rem;
+  padding-left: 0.4375rem;
+  padding-right: 0.4375rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 @supports (font-size: clamp( 0.9375rem , 0.9176192843rem  +  0.0994035785vw , 1rem )) {
@@ -1339,6 +1370,10 @@ body {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.spollers-faq__body {
+  padding-top: 0.625rem;
 }
 
 @supports (padding-bottom: clamp( 2.5rem , 0.4522862823rem  +  10.2385685885vw , 8.9375rem )) {
@@ -1494,8 +1529,16 @@ body {
   width: 100%;
 }
 
-.body-discord {
-  padding-top: 9.0625rem;
+@supports (padding-bottom: clamp( 3.75rem , 2.060139165rem  +  8.449304175vw , 9.0625rem )) {
+  .body-discord {
+    padding-bottom: clamp( 3.75rem , 2.060139165rem  +  8.449304175vw , 9.0625rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 3.75rem , 2.060139165rem  +  8.449304175vw , 9.0625rem )) {
+  .body-discord {
+    padding-bottom: calc(3.75rem + 5.3125 * (100vw - 20rem) / 62.875);
+  }
 }
 
 .body-discord__title {
@@ -1562,6 +1605,11 @@ body {
   font-size: 1rem;
   line-height: 1;
   color: #000;
+  -webkit-transition: -webkit-box-shadow 0.4s ease 0s;
+  transition: -webkit-box-shadow 0.4s ease 0s;
+  -o-transition: box-shadow 0.4s ease 0s;
+  transition: box-shadow 0.4s ease 0s;
+  transition: box-shadow 0.4s ease 0s, -webkit-box-shadow 0.4s ease 0s;
 }
 
 .button_border {
@@ -1745,6 +1793,10 @@ body {
   .header-team__title_duplication {
     display: none;
   }
+
+  .body-discord__button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 29.99875em) {
@@ -1762,9 +1814,34 @@ body {
             box-shadow: 0 0 5px #fff;
   }
 
+  .footer__link:hover {
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+  }
+
+  .item-artist:hover {
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+  }
+
+  .tabs__title:hover {
+    -webkit-box-shadow: 0 0 10px #8dfd1b;
+            box-shadow: 0 0 10px #8dfd1b;
+  }
+
+  .spollers-faq__title:hover {
+    -webkit-box-shadow: 0 0 10px #8dfd1b;
+            box-shadow: 0 0 10px #8dfd1b;
+  }
+
   .social-item:hover {
     -webkit-box-shadow: 0 0 5px #fff;
             box-shadow: 0 0 5px #fff;
+  }
+
+  .button:hover {
+    -webkit-box-shadow: 0 0 10px #8dfd1b;
+            box-shadow: 0 0 10px #8dfd1b;
   }
 }
 
